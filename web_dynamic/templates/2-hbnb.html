@@ -12,13 +12,19 @@
   </head>
   <body>
     <header>
-      <!-- Existing content -->
-
-      <!-- New div for API status -->
+      <div class="filters">
+      <h4>Amenities</h4>
+      <ul>
+        {% for amenity in amenities %}
+          <li>
+            <input type="checkbox" data-id="{{ amenity.id }}" data-name="{{ amenity.name }}">
+            {{ amenity.name }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
       <div id="api_status" class="api-status"></div>
     </header>
-
-    <!-- Rest of the body content -->
   </body>
 </html>
 
